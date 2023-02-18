@@ -1,0 +1,8 @@
+{
+    "stacks": {
+        "ninepst": {
+            "stackable": true,
+            "stackLimit": 999999999
+        }
+    }
+}
