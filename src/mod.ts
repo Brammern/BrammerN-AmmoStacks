@@ -17,21 +17,66 @@ class Mod implements IPostDBLoadMod
         const config = this.modConfig;
 
         // Allowing bigger ammo stacks
-        if (config.stacks.ninepst.stackable === true)
+        if (config.stacks.apslug.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.apslug.stackLimit;
+        }
+        if (config.stacks.ninepst.enabled === true)
         {
             items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.ninepst.stackLimit;
         }
+        if (config.stacks.m855a1.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.m855a1.stackLimit;
+        }
+        if (config.stacks.m856a1.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.m856a1.stackLimit;
+        }
+        if (config.stacks.m995.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.m995.stackLimit;
+        }
+        if (config.stacks.m61.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.m61.stackLimit;
+        }
+        if (config.stacks.m62.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.m62.stackLimit;
+        }
+        if (config.stacks.ignolik.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.ignolik.stackLimit;
+        }
+        if (config.stacks.bp_762x39.enabled === true)
+        {
+            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.bp_762x39.stackLimit;
+        }
 
-        // Find the ledx item by its Id
-        //const ledx = tables.templates.items["5c0530ee86f774697952d952"];
+        // CURRENCY STACKS INCREASEMENT
+        if (config.stacks.roubles.enabled === true)
+        {
+            items["5449016a4bdc2d6f028b456f"]._props.StackMaxSize = config.stacks.roubles.stackLimit;
+        }
+        if (config.stacks.dollars.enabled === true)
+        {
+            items["5696686a4bdc2da3298b456a"]._props.StackMaxSize = config.stacks.dollars.stackLimit;
+        }
+        if (config.stacks.euros.enabled === true)
+        {
+            items["569668774bdc2da2298b4568"]._props.StackMaxSize = config.stacks.euros.stackLimit;
+        }
 
-        // Update one of its properties to be true
-        //ledx._props.CanSellOnRagfair = true;
-
-
-        // example #2
-        // get globals settings and set flea market min level to be 1
-        //tables.globals.config.RagFair.minUserLevel = 1;
+        // Valueables stackable?
+        if (config.stacks.bitcoin.enabled === true)
+        {
+            items["59faff1d86f7746c51718c9c"]._props.StackMaxSize = config.stacks.bitcoin.stackLimit;
+        }
+        if (config.stacks.gpcoin.enabled === true)
+        {
+            items["59faff1d86f7746c51718c9c"]._props.StackMaxSize = config.stacks.gpcoin.stackLimit;
+        }
     }
 }
 // Logging to console for successful injection

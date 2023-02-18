@@ -1,7 +1,59 @@
 {
     "stacks": {
+        "apslug": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
         "ninepst": {
-            "stackable": true,
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "m855a1": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "m856a1": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "m995": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "m61": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "m62": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "ignolik": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "bp_762x39": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "roubles": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "dollars": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "euros": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "bitcoin": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "gpcoin": {
+            "enabled": true,
             "stackLimit": 999999999
         }
     }
