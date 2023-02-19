@@ -12,9 +12,10 @@ Very simple code. Take a look urself :)
 
 ## **Installation**
 
-1. Find your root `SPT-AKI` installation
-2. Navigate to `user\mods` and extract `BrammerN-BetterStacks-x.x.x.zip` here.
-3. Enjoy :)
+1. Download the [latest build](https://github.com/Brammern/BrammerN-BetterStacks/releases)
+2. Find your root `SPT-AKI` installation
+3. Navigate to `user\mods` and extract `BrammerN-BetterStacks-x.x.x.zip` here.
+4. Enjoy :)
 
 
 ## **Compatibility & Requirements**
