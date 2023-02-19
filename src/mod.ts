@@ -9,14 +9,11 @@ class Mod implements IPostDBLoadMod
     private modConfig = require("../config/config.json");
     public postDBLoad(container: DependencyContainer): void 
     {
-        // get database from server
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
-
-        // Get all the in-memory json found in /assets/database
-        
         const dB = databaseServer.getTables();
         const items = dB.templates.items;
         const config = this.modConfig;
+        
         for (const id in items)
         {
             const base = items[id]
