@@ -36,6 +36,18 @@
             "enabled": true,
             "stackLimit": 999999999
         },
+        "m80": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "subsonicsx": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
+        "mp7ap": {
+            "enabled": true,
+            "stackLimit": 999999999
+        },
         "roubles": {
             "enabled": true,
             "stackLimit": 999999999

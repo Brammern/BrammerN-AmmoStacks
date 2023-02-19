@@ -1,6 +1,6 @@
 {
-    "name": "AmmoStacks",
-    "version": "0.1.0",
+    "name": "BetterStacks",
+    "version": "0.1.1",
     "main": "src/mod.js",
     "license": "MIT",
     "author": "BrammerN",
