@@ -107,7 +107,7 @@ class Mod implements IPostDBLoadMod
 // Logging to console for successful injection
 const logger = container.resolve<ILogger>("WinstonLogger");
 
-logger.info("Loading: BrammerN-AmmoStacks");
+logger.info("Loading: BrammerN-BetterStacks");
 
 
 module.exports = { mod: new Mod() }
