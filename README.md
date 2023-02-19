@@ -6,9 +6,9 @@ Very simple code. Take a look urself :)
 
 ## **Features**
 
-- 12 ammo types can now be stacked (exact amount can be configured inside the config folder).
-- All currency can be stacked and configured as well.
-- Bitcoins and GP Coins is now stackable as well.
+- All ammo types can now be stacked (exact amount can be configured inside the config file).
+- All currency can be stacked and configured.
+- Bitcoins and GP Coins is now stackable.
 
 ## **Installation**
 
@@ -17,6 +17,8 @@ Very simple code. Take a look urself :)
 3. Navigate to `user\mods` and extract `BrammerN-BetterStacks-x.x.x.zip` here.
 4. Enjoy :)
 
+## **Configuration**
+> Open the config.json file in the configs folder. Here you can configure the specified item categorys stack sizes. 
 
 ## **Compatibility & Requirements**
 

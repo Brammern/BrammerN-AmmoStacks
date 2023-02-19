@@ -65,16 +65,13 @@ class Mod implements IPostDBLoadMod
                     editSimpleItemData(id, "Weight", config.Items.AmmoStacks.Weight)
                 }
             }
+            // CURRENCY
+            if (base._parent.includes("543be5dd4bdc2deb348b4569") && config.Items.currency.enabled === true)
+            {
+                editSimpleItemData(id, "StackMaxSize", config.Items.currency.stackLimit)
+            }
         }
-        // CURRENCY
-        if (config.Items.currency.enabled === true)
-        {
-            // Stack Modification
-            items["5449016a4bdc2d6f028b456f"]._props.StackMaxSize = config.Items.currency.stackLimit; // Roubles
-            items["5696686a4bdc2da3298b456a"]._props.StackMaxSize = config.Items.currency.stackLimit; // Dollars
-            items["569668774bdc2da2298b4568"]._props.StackMaxSize = config.Items.currency.stackLimit; // Euros
-        }
-        
+                
         // VALUEABLES
         if (config.Items.valueables.enabled === true)
         {
