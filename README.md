@@ -1,3 +1,6 @@
+<p style="text-align: center">
+    <a href="https://github.com/Brammern/BrammerN-BetterStacks/releases"><img src="https://badgen.net/github/release/Brammern/BrammerN-BetterStacks"></a><a style="padding-left: 5px" href="https://dev.sp-tarkov.com/SPT-AKI/Stable-releases/releases/tag/3.5.0"><img src="https://badgen.net/badge/SPT-Version/3.5.0/green"></a>
+</p>
 
 Very simple code. Take a look urself :)
 
@@ -21,4 +24,4 @@ Very simple code. Take a look urself :)
 | Version | Supported          |
 | ------- | ------------------ |
 | 3.5.0   | :white_check_mark: |
-| 3.4.3 and below  | ❓ UNTESTED                 |
+| 3.4.3 and below  | ❓ UNTESTED |
