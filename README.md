@@ -13,6 +13,11 @@ Very simple code. Take a look urself :)
 2. Navigate to `user\mods` and extract `BrammerN-BetterStacks-x.x.x.zip` here.
 3. Enjoy :)
 
+
+## **Compatibility & Requirements**
+
+[SPT-AKI](https://www.sp-tarkov.com/) / **0.13.0.21734**
+
 | Version | Supported          |
 | ------- | ------------------ |
 | 3.5.0   | :white_check_mark: |
