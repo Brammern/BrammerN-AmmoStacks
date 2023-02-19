@@ -17,7 +17,6 @@ class Mod implements IPostDBLoadMod
         const dB = databaseServer.getTables();
         const items = dB.templates.items;
         const config = this.modConfig;
-        //const globals = dB.globals.config;
         for (const id in items)
         {
             const base = items[id]
@@ -71,7 +70,7 @@ class Mod implements IPostDBLoadMod
                 editSimpleItemData(id, "StackMaxSize", config.Items.currency.stackLimit)
             }
         }
-                
+
         // VALUEABLES
         if (config.Items.valueables.enabled === true)
         {
