@@ -17,7 +17,6 @@ class Mod implements IPostDBLoadMod
         const dB = databaseServer.getTables();
         const items = dB.templates.items;
         const config = this.modConfig;
-        //const globals = dB.globals.config;
         for (const id in items)
         {
             const base = items[id]
@@ -44,7 +43,6 @@ class Mod implements IPostDBLoadMod
                     editSimpleItemData(id, "StackMaxSize", config.Items.AmmoStacks.MarksmanRound)
                     editSimpleItemData(id, "Weight", config.Items.AmmoStacks.Weight)
                 }
-                //KMC
                 if (str[2] == "10MM" || str[2] == "40SW" || str[2] == "357SIG" || str[2] == "9MM" || str[2] == "45ACP" || str[2] == "50AE" || str[2] == "380AUTO")
                 {
                     editSimpleItemData(id, "StackMaxSize", config.Items.AmmoStacks.PistolRound)
@@ -66,92 +64,13 @@ class Mod implements IPostDBLoadMod
                     editSimpleItemData(id, "Weight", config.Items.AmmoStacks.Weight)
                 }
             }
-        }
-        /*
-        // AMMO
-        if (config.stacks.x1270Shots.enabled === true)
-        {
-            // Stack Modification
-            items["5d6e68a8a4b9360b6c0d54e2"]._props.StackMaxSize = config.stacks.x1270Shots.stackLimit; // AP SLUG
-            items["5d6e68c4a4b9361b93413f79"]._props.StackMaxSize = config.stacks.x1270Shots.stackLimit; // 12/70 makeshift .50 BMG slug
-            // Weight Modification
-            items["5d6e68a8a4b9360b6c0d54e2"]._props.Weight = config.stacks.global.weight; // AP SLUG
-            items["5d6e68c4a4b9361b93413f79"]._props.Weight = config.stacks.global.weight; // 12/70 makeshift .50 BMG slug
+            // CURRENCY
+            if (base._parent.includes("543be5dd4bdc2deb348b4569") && config.Items.currency.enabled === true)
+            {
+                editSimpleItemData(id, "StackMaxSize", config.Items.currency.stackLimit)
+            }
         }
 
-        if (config.stacks.x19mmRounds.enabled === true)
-        {
-            // Stack Modification
-            items["56d59d3ad2720bdb418b4577"]._props.StackMaxSize = config.stacks.x19mmRounds.stackLimit; // 9x19mm PST gzh
-            items["5efb0da7a29a85116f6ea05f"]._props.StackMaxSize = config.stacks.x19mmRounds.stackLimit; // 9x19mm PBP gzh
-            // Weight Modification
-            items["56d59d3ad2720bdb418b4577"]._props.Weight = config.stacks.global.weight; // 9x19mm PST gzh
-            items["5efb0da7a29a85116f6ea05f"]._props.Weight = config.stacks.global.weight; // 9x19mm PBP gzh
-        }
-
-        if (config.stacks.x556mmRounds.enabled === true)
-        {
-            // Stack Modification
-            items["54527ac44bdc2d36668b4567"]._props.StackMaxSize = config.stacks.x556Rounds.stackLimit; // 5.56x45mm M855A1
-            items["59e6906286f7746c9f75e847"]._props.StackMaxSize = config.stacks.x556Rounds.stackLimit; // 5.56x45mm M856A1
-            items["59e690b686f7746c9f75e848"]._props.StackMaxSize = config.stacks.x556Rounds.stackLimit; // 5.56x45mm M995
-            // Weight Modification
-            items["54527ac44bdc2d36668b4567"]._props.Weight = config.stacks.global.weight; // 5.56x45mm M855A1
-            items["59e6906286f7746c9f75e847"]._props.Weight = config.stacks.global.weight; // 5.56x45mm M856A1
-            items["59e690b686f7746c9f75e848"]._props.Weight = config.stacks.global.weight; // 5.56x45mm M995
-        }
-
-        if (config.stacks.x762x51Rounds.enabled === true)
-        {
-            // Stack Modification
-            items["5a6086ea4f39f99cd479502f"]._props.StackMaxSize = config.stacks.x762x51Rounds.stackLimit; // 7.62x51mm M61
-            items["5a608bf24f39f98ffc77720e"]._props.StackMaxSize = config.stacks.x762x51Rounds.stackLimit; // 7.62x51mm M62
-            items["58dd3ad986f77403051cba8f"]._props.StackMaxSize = config.stacks.x762x51Rounds.stackLimit; // 7.62x51mm M80
-            // Weight Modification
-            items["5a6086ea4f39f99cd479502f"]._props.Weight = config.stacks.global.weight; // 7.62x51mm M61
-            items["5a608bf24f39f98ffc77720e"]._props.Weight = config.stacks.global.weight; // 7.62x51mm M62
-            items["58dd3ad986f77403051cba8f"]._props.Weight = config.stacks.global.weight; // 7.62x51mm M80
-        }
-
-        if (config.stacks.x545x39Rounds.enabled === true)
-        {
-            // Stack Modification
-            items["5c0d5e4486f77478390952fe"]._props.StackMaxSize = config.stacks.x545x39Rounds.stackLimit; // 5.45x39mm PPBS gs "Igolnik"
-            items["56dff026d2720bb8668b4567"]._props.StackMaxSize = config.stacks.x545x39Rounds.stackLimit; // 5.45x39mm BS gs
-            // Weight Modification
-            items["5c0d5e4486f77478390952fe"]._props.Weight = config.stacks.global.weight; // 5.45x39mm PPBS gs "Igolnik"
-            items["56dff026d2720bb8668b4567"]._props.Weight = config.stacks.global.weight; // 5.45x39mm BS gs
-        }
-
-        if (config.stacks.x762x39Rounds.enabled === true)
-        {
-            // Stack Modification
-            items["59e0d99486f7744a32234762"]._props.StackMaxSize = config.stacks.x762x39Rounds.stackLimit; // 7.62x39mm BP gzh
-            items["601aa3d2b2bcb34913271e6d"]._props.StackMaxSize = config.stacks.x762x39Rounds.stackLimit; // 7.62x39mm MAI AP
-            // Weight Modification
-            items["59e0d99486f7744a32234762"]._props.Weight = config.stacks.global.weight; // 7.62x39mm BP gzh
-            items["601aa3d2b2bcb34913271e6d"]._props.Weight = config.stacks.global.weight; // 7.62x39mm MAI AP
-        }
-
-        if (config.stacks.x46x30Rounds.enabled === true)
-        {
-            // Stack Modification
-            items["5ba26844d4351e00334c9475"]._props.StackMaxSize = config.stacks.x46x30Rounds.stackLimit; // 4.6x30mm Subsonic SX
-            items["5ba26835d4351e0035628ff5"]._props.StackMaxSize = config.stacks.x46x30Rounds.stackLimit; // 4.6x30mm AP SX
-            // Weight Modification
-            items["5ba26844d4351e00334c9475"]._props.Weight = config.stacks.global.weight; // 4.6x30mm Subsonic SX
-            items["5ba26835d4351e0035628ff5"]._props.Weight = config.stacks.global.weight; // 4.6x30mm AP SX
-        }
-*/
-        // CURRENCY
-        if (config.Items.currency.enabled === true)
-        {
-            // Stack Modification
-            items["5449016a4bdc2d6f028b456f"]._props.StackMaxSize = config.Items.currency.stackLimit; // Roubles
-            items["5696686a4bdc2da3298b456a"]._props.StackMaxSize = config.Items.currency.stackLimit; // Dollars
-            items["569668774bdc2da2298b4568"]._props.StackMaxSize = config.Items.currency.stackLimit; // Euros
-        }
-        
         // VALUEABLES
         if (config.Items.valueables.enabled === true)
         {
@@ -175,7 +94,7 @@ class Mod implements IPostDBLoadMod
 // Logging to console for successful injection
 const logger = container.resolve<ILogger>("WinstonLogger");
 
-logger.logWithColor("LOADING: BRAMMERN BIGGER STACKS 0.1.2",LogTextColor.YELLOW);
+logger.logWithColor("LOADING: BRAMMERN BIGGER STACKS 0.1.5",LogTextColor.YELLOW);
 
 
 module.exports = { mod: new Mod() }
